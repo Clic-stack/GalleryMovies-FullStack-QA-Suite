@@ -1,4 +1,4 @@
-## 🎬 MoviesApp Fullstack Project
+## 🎬 GalleryMovies: Full-Stack Movie Manager
 
 A professional fullstack application built with **React, Redux, Express, Sequelize, and PostgreSQL.**
 This project demonstrates scalable API design, cinematic UI, reusable components, and deployment, ready architecture ideal for showcasing fullstack skills.
