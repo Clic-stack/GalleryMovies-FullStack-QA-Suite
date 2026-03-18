@@ -17,7 +17,7 @@ This project demonstrates scalable API design, cinematic UI, reusable components
 ---
 
 ## 🎬🌐 FullStack Project: MoviesApp online with Netlify
-🔗 https://galerymovies.netlify.app
+🔗 https://gallerymovies.netlify.app
 
 ---
 
