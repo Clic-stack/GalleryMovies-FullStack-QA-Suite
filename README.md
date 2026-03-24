@@ -3,7 +3,46 @@
 A professional fullstack application built with **React, Redux, Express, Sequelize, and PostgreSQL.**
 This project demonstrates scalable API design, cinematic UI, reusable components, and deployment, ready architecture ideal for showcasing fullstack skills.
 
+<img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
+
 ---
+
+### 📊 Database Architecture (Many-to-Many Relationships)
+
+```mermaid
+erDiagram
+    MOVIE ||--o{ GENRE_MOVIES : "belongs to"
+    GENRE ||--o{ GENRE_MOVIES : "has"
+    
+    MOVIE ||--o{ ACTOR_MOVIES : "features"
+    ACTOR ||--o{ ACTOR_MOVIES : "stars in"
+    
+    MOVIE ||--o{ DIRECTOR_MOVIES : "directed by"
+    DIRECTOR ||--o{ DIRECTOR_MOVIES : "directs"
+
+    MOVIE {
+        string name
+        string image
+        text synopsis
+        int release_year
+    }
+    ACTOR {
+        string first_name
+        string last_name
+        string nationality
+    }
+    DIRECTOR {
+        string first_name
+        string last_name
+        string nationality
+    }
+    GENRE {
+        string name
+    }
+```
+
+---
+
 ## 🌐 Deployment
 
 ## 🚀 Backend: Server online with Render
@@ -66,7 +105,7 @@ This project was designed to:
 | POST   | `/movies`        | Create a new movie |
 | GET    | `/movies/:id`    | Return a movie by id searched |
 | PUT    | `/movies/:id`    | Update a movie by id |
-| DELETE | `/users/:id`     | Remove a movie by id |
+| DELETE | `/movies/:id`     | Remove a movie by id |
 
 *Note: Standard CRUD enpoints for all models equally applicable for genres, actors and directors.*
 
@@ -236,6 +275,35 @@ npm run dev
 
 *This way, the backend will be available at: `http://localhost:4000`.*
 
+## 🎬 Frontend Setup
+
+1. Change directory to movies-app-frontend:
+   
+```bash
+cd movies-app-frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Configure environment variables using `.env.example` file and change name for `.env`:
+
+```bash
+VITE_API_URL=http://localhost:4000/api/v1
+```
+*Note: Ensure this matches your Backend URL.*
+
+4. Run the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at: `http://localhost:5173`
+
 ---
 
 ## 🎨Author
@@ -248,7 +316,46 @@ Developed by Clio Salgado as part of the Node.js & Backend module at Academlo, w
 Aplicación fullstack profesional construida con **React, Redux, Express, Sequelize y PostgreSQL.** 
 Este proyecto demuestra el diseño de una API escalable, interfaz cinematográfica, componentes reutilizables y arquitectura lista para despliegue, ideal para mostrar habilidades fullstack.
 
+<img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/eb2733b7-9076-44e8-b6a8-c6eaa01fad60" />
+
 ---
+
+### 📊 Arquitectura de la Base de Datos (Relación Many-to-Many)
+
+```mermaid
+erDiagram
+    MOVIE ||--o{ GENRE_MOVIES : "belongs to"
+    GENRE ||--o{ GENRE_MOVIES : "has"
+    
+    MOVIE ||--o{ ACTOR_MOVIES : "features"
+    ACTOR ||--o{ ACTOR_MOVIES : "stars in"
+    
+    MOVIE ||--o{ DIRECTOR_MOVIES : "directed by"
+    DIRECTOR ||--o{ DIRECTOR_MOVIES : "directs"
+
+    MOVIE {
+        string name
+        string image
+        text synopsis
+        int release_year
+    }
+    ACTOR {
+        string first_name
+        string last_name
+        string nationality
+    }
+    DIRECTOR {
+        string first_name
+        string last_name
+        string nationality
+    }
+    GENRE {
+        string name
+    }
+```
+
+---
+
 ## 🌐 Despliegue
 
 ## 🚀 Backend: Servidor en línea desplegado con Render
@@ -310,7 +417,7 @@ Este proyecto fue diseñado para:
 | POST   | `/movies`        | Crea una nueva película |
 | GET    | `/movies/:id`    | Regresa la película correspondiente al id solicitado |
 | PUT    | `/movies/:id`    | Actualiza la pleícula con el id solicitado |
-| DELETE | `/users/:id`     | Elimina una película con el id solicitado |
+| DELETE | `/movies/:id`     | Elimina una película con el id solicitado |
 
 *Nota: Endpoints de un CRUD estándar aplicables igualmente para géneros, actores y directores.*
 
@@ -479,6 +586,35 @@ npm run dev
 ```
 
 *De esta forma, el backend queda disponible en: `http://localhost:4000`.*
+
+## 🎬 Instalación Frontend
+
+1. Cambia el directorio o ruta a movies-app-frontend:
+   
+```bash
+cd movies-app-frontend
+```
+
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Configura las variables de entorno usando el archivo `.env.example` y cambia el nombre de ese archivo por `.env`:
+
+```bash
+VITE_API_URL=http://localhost:4000/api/v1
+```
+*Nota: Asegurate que la URL que coloques sea la tu backend.*
+
+4. Corre el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en: `http://localhost:5173`
 
 ---
 
