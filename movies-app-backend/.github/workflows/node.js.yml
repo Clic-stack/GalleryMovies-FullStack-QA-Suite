@@ -1,4 +1,4 @@
-name: Node.js CI (MoviesApp-FullStack-Project)
+name: Node.js CI (MoviesApp-FullStack-Project) 
 
 on:
   push:
