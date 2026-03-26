@@ -1,17 +1,17 @@
 import { Sequelize } from "sequelize";
-import { env } from "../env/index.js";
 
-const sequelize = new Sequelize(env.DATABASE_URL, {
-    dialect: "postgres",
-    logging: false,
-    timezone: "+00:00",
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: 'postgres',
+  logging: false,
+  timezone: "+00:00",
+  dialectOptions: {
+        ssl: process.env.NODE_ENV === 'production' 
+            ? { require: true, rejectUnauthorized: false } 
+            : false
     }
-})
+});
 
 export const connectDB = async () => {
     console.log('Connecting to Database...')

@@ -8,6 +8,6 @@ router.get("/", (req, res) => {
 })
 
 // Rutas de la API
-router.use("/api", apiRoutes)
+router.use(apiRoutes)
 
 export default router
