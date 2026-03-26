@@ -1,4 +1,4 @@
-name: Node.js CI - MoviesApp-FullStack-Project
+name: Node.js CI (MoviesApp-FullStack-Project)
 
 on:
   push:
@@ -10,13 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      DATABASE_URL: postgres://user:pass@localhost:5432/test_db
-      NODE_ENV: test
-
     steps:
     - uses: actions/checkout@v4
-    
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
@@ -28,6 +23,6 @@ jobs:
       run: npm install
       working-directory: ./movies-app-backend
 
-    - name: Run Tests
+    - name: Run tests
       run: npm test
       working-directory: ./movies-app-backend
