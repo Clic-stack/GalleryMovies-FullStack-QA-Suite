@@ -49,5 +49,6 @@ jobs:
       working-directory: ./movies-app-backend
 
     - name: Run tests
-      run: npm test
+      # Agregamos --runInBand para que los tests corran uno por uno y no choquen en la DB
+      run: npm test -- --runInBand
       working-directory: ./movies-app-backend
