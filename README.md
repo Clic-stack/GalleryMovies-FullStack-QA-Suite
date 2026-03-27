@@ -1,4 +1,4 @@
-## 🎬 GalleryMovies: Full-Stack Movie Manager & Professional Testing Suite <br/>  <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Tests-CI--Continuous%20Integration-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
+## 🎬 GalleryMovies: Full-Stack QA & Management Suite <br/>  <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Tests-CI--Continuous%20Integration-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
 
 > [!TIP]
 >  Quick Setup Note: This project includes enviroment variables and configures instructions into .env.example file for development and testing environments, (remember all enviroment values is with your credentials). This facilitates rapid deployment and ensures the test suite runs out-of-the-box without extra security overhead.
@@ -400,7 +400,7 @@ Developed by Clio Salgado. Focused on building reliable, data-driven fullstack s
 
 🔽 **Versión en Español** 🔽
 
-## 🎬 GalleryMovies: Gestor de Películas Full-Stack y Suite de Pruebas Profesional <br/> <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Pipeline-Integración%20Continua%20(CI)-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
+## 🎬 GalleryMovies: Suite de Gestión y Calidad (QA) Full-Stack <br/> <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Pipeline-Integración%20Continua%20(CI)-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
 
 > [!TIP]
 >  Nota para Configuración Rápida: Este proyecto incluye variables de entorno e instrucciones de configuración en el archivo `.env.example` para entornos de desarrollo y pruebas, (recuerda que todos los valores deben corresponder a tus propias credenciales). Esto facilita un despliegue rápido y garantiza que la suite de pruebas funcione de inmediato (out-of-the-box) sin configuraciones de seguridad adicionales.
