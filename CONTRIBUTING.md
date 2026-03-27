@@ -1,4 +1,4 @@
-# Contributing to Movies App: Gallery Movies 🎬
+# Contributing to GalleryMovies-FullStack-QA-Suite 🎬
 
 First of all, thank you for considering contributing to this project! It's people like you who make the open-source community such an amazing place to learn and create.
 
@@ -11,7 +11,7 @@ If you find a bug, please create an issue in the repository including:
 * What you expected to happen vs. what actually happened.
 
 ### Suggesting Enhancements 💡
-Have an idea to make the Movies App better? Open an issue with the "enhancement" tag and describe the feature you'd like to see.
+Have an idea to make the GalleryMovies-FullStack-QA-Suite better? Open an issue with the "enhancement" tag and describe the feature you'd like to see.
 
 ### Pull Requests 🏗️
 1. Fork the repository.
@@ -30,7 +30,7 @@ Have an idea to make the Movies App better? Open an issue with the "enhancement"
 
 🔽 Versión en Español 🔽
 
-# Contribuyendo a Movies App: Gallery Movies 🎬
+# Contribuyendo a GalleryMovies: Suite de Gestión y Calidad (QA) Full-Stack 🎬
 
 Antes que nada, ¡muchas gracias por considerar contribuir a este proyecto! Personas como tú son las que hacen de la comunidad de código abierto un lugar increíble para aprender y crear.
 
@@ -43,7 +43,7 @@ Si encuentras un error, por favor crea un "Issue" en el repositorio incluyendo:
 * Qué esperabas que sucediera frente a lo que realmente sucedió.
 
 ### Sugerir Mejoras 💡
-¿Tienes una idea para hacer que Movies App sea mejor? Abre un "Issue" con la etiqueta "enhancement" y describe la funcionalidad que te gustaría ver.
+¿Tienes una idea para hacer que GalleryMovies: Suite de Gestión y Calidad (QA) Full-Stack sea mejor? Abre un "Issue" con la etiqueta "enhancement" y describe la funcionalidad que te gustaría ver.
 
 ### Pull Requests 🏗️
 1. Haz un Fork del repositorio.
