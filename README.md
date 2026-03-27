@@ -1,6 +1,11 @@
-## 🎬 GalleryMovies: Full-Stack Movie Manager & Professional Testing Suite
+## 🎬 GalleryMovies: Full-Stack Movie Manager & Professional Testing Suite <br/>  <br/> <p align="right">[![Real-World Integration Tests](https://img.shields.io/badge/Tests-CI--Continuous%20Integration-003366?style=for-the-badge&logo=postgresql&logoColor=gold)](https://github.com/Clic-stack/Booking-App/actions)</p>
+
+> [!TIP]
+>  Quick Setup Note: This project includes enviroment variables and configures instructions into .env.example file for development and testing environments, (remember all enviroment values is with your credentials). This facilitates rapid deployment and ensures the test suite runs out-of-the-box without extra security overhead.
+[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)
 
 A professional fullstack application built with `React`, `Redux`, `Express`, `Sequelize`, and `PostgreSQL`.
+
 This project features a robust **CI/CD pipeline** and a **comprehensive testing suite**, demonstrating *scalable API design, cinematic UI, and production-ready architecture*.
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
@@ -21,6 +26,18 @@ This project features a robust **CI/CD pipeline** and a **comprehensive testing 
 
 ## 📄 MoviesCRUD: Documentation online with Postman
 🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
+
+---
+
+## 🟢 Technical Quality Assurance
+
+**What does the "passing" badge at the beginning of this project mean?**
+This project implements Continuous Integration (CI/CD). This means that every time a code change is made, an automated system executes 19+ security and functional tests.
+
+- **Green Badge (Passing):** The code is stable, secure, and production-ready.
+- **Red Badge (Failing):** Indicates an error was detected before it could affect the end user.
+
+This ensures that GalleryMovies consistently maintains professional quality standards.
 
 ---
 
@@ -77,7 +94,7 @@ erDiagram
 
 ---
 
-##🧪 Professional Testing Suite (CI/CD)
+## 🧪 Professional Testing Suite (CI/CD)
 The reliability of **GalleryMovies** is backed by an automated testing workflow. Using **Jest** and **Supertest**, the project implements 19+ strategic tests covering:
 
 - **Full CRUD Operations:** Actors, Genres, Directors, and Movies.
@@ -383,7 +400,11 @@ Developed by Clio Salgado. Focused on building reliable, data-driven fullstack s
 
 🔽 **Versión en Español** 🔽
 
-## 🎬 GalleryMovies: Gestor de Películas Full-Stack y Suite de Pruebas Profesional
+## 🎬 GalleryMovies: Gestor de Películas Full-Stack y Suite de Pruebas Profesional <br/> <br/> <p align="right">[![Real-World Integration Tests](https://img.shields.io/badge/Pipeline-Integración%20Continua%20(CI)-003366?style=for-the-badge&logo=postgresql&logoColor=gold)](https://github.com/Clic-stack/Booking-App/actions)</p>
+
+> [!TIP]
+>  Nota para Configuración Rápida: Este proyecto incluye variables de entorno e instrucciones de configuración en el archivo `.env.example` para entornos de desarrollo y pruebas, (recuerda que todos los valores deben corresponder a tus propias credenciales). Esto facilita un despliegue rápido y garantiza que la suite de pruebas funcione de inmediato (out-of-the-box) sin configuraciones de seguridad adicionales.
+[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)
 
 Aplicación fullstack profesional construída con `React`, `Redux`, `Express`, `Sequelize` y `PostgreSQL`. 
 Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas integral y completa**, mostrando una *interfaz cinemática,  diseño de APIs escalables y arquitectura lista para producción*.
@@ -406,6 +427,18 @@ Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas 
 
 ## 📄 MoviesCRUD: Documentación en línea con Postman
 🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
+
+---
+
+## 🟢 Garantía de Calidad Técnica
+
+**¿Qué significa el sello "passing" al inicio de este proyecto?**
+Este proyecto utiliza **Integración Continua (CI/CD)**. Significa que cada vez que realizo un cambio en el código, un sistema automatizado ejecuta más de 19 pruebas de seguridad y funcionamiento.
+
+- **Sello Verde (Passing):** El código es estable, seguro y está listo para producción.
+- **Sello Rojo (Failing):** Indica un error detectado antes de que afecte al usuario final.
+
+Esto asegura que **GalleryMovies** mantenga estándares de calidad profesional de forma constante.
 
 ---
 
