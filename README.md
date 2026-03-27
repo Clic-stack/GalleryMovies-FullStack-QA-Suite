@@ -1,6 +1,7 @@
 ## 🎬 GalleryMovies: Full-Stack Movie Manager & Professional Testing Suite
 
-A professional fullstack application built with `React`, `Redux`, `Express`, `Sequelize`, and `PostgreSQL`. This project features a robust **CI/CD pipeline** and a **comprehensive testing suite**, demonstrating *scalable API design, cinematic UI, and production-ready architecture*.
+A professional fullstack application built with `React`, `Redux`, `Express`, `Sequelize`, and `PostgreSQL`.
+This project features a robust **CI/CD pipeline** and a **comprehensive testing suite**, demonstrating *scalable API design, cinematic UI, and production-ready architecture*.
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
 
@@ -384,7 +385,8 @@ Developed by Clio Salgado. Focused on building reliable, data-driven fullstack s
 
 ## 🎬 GalleryMovies: Gestor de Películas Full-Stack y Suite de Pruebas Profesional
 
-Aplicación fullstack profesional construída con `React`, `Redux`, `Express`, `Sequelize` y `PostgreSQL`. Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas integral y completa**, mostrando una *interfaz cinemática,  diseño de APIs escalables y arquitectura lista para producción*.
+Aplicación fullstack profesional construída con `React`, `Redux`, `Express`, `Sequelize` y `PostgreSQL`. 
+Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas integral y completa**, mostrando una *interfaz cinemática,  diseño de APIs escalables y arquitectura lista para producción*.
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
 
