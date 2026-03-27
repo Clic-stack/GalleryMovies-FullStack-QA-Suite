@@ -1,9 +1,25 @@
-## 🎬 GalleryMovies: Full-Stack Movie Manager
+## 🎬 GalleryMovies: Full-Stack Movie Manager & Professional Testing Suite
 
-A professional fullstack application built with **React, Redux, Express, Sequelize, and PostgreSQL.**
-This project demonstrates scalable API design, cinematic UI, reusable components, and deployment, ready architecture ideal for showcasing fullstack skills.
+A professional fullstack application built with `React`, `Redux`, `Express`, `Sequelize`, and `PostgreSQL`. This project features a robust **CI/CD pipeline** and a **comprehensive testing suite**, demonstrating *scalable API design, cinematic UI, and production-ready architecture*.
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
+
+---
+
+## 🌐 Deployment
+
+## 🎬🌐 FullStack Project: MoviesApp online with Netlify
+🔗 https://gallerymovies.netlify.app
+
+---
+
+## 🚀 Backend: Server online with Render
+🔗 https://moviesapp-lc0z.onrender.com
+
+---
+
+## 📄 MoviesCRUD: Documentation online with Postman
+🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
 
 ---
 
@@ -43,64 +59,54 @@ erDiagram
 
 ---
 
-## 🌐 Deployment
-
-## 🚀 Backend: Server online with Render
-🔗 https://moviesapp-lc0z.onrender.com
-
----
-
-## 📄 MoviesCRUD: Documentation online with Postman
-🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
-
----
-
-## 🎬🌐 FullStack Project: MoviesApp online with Netlify
-🔗 https://gallerymovies.netlify.app
-
----
-
 ## 🎯 Project Goals
 
-This project was designed to:
-
-- Design and build a movie API with models for genres, actors, directors, and movies. 
-- Implement complex relationships: a movie can have multiple genres, actors, and directors. 
-- Develop complete CRUD endpoints for each entity, ensuring create, read, update, and delete operations.  
-- Include advanced endpoints to assign genres, actors, and directors to movies through dynamic relationships.
-- Deploy the backend on Render and verify functionality with real data (at least two movies created).
-- Integrate a React frontend that consumes the API, showcasing a cinematic interface inspired by streaming platforms.
-- Document the project professionally with README, `.env.example`, and clear structure for easy cloning and execution.
+- **Complex Modeling:** Implement many-to-many relationships using Sequelize ORM.
+- **Advanced Logic:** Dynamic calculation of movie associations and cinematic data filtering.
+- **Quality Assurance:** Achieve 100% core business logic coverage through automated integration tests.
+- **Seamless Integration:** Connect a React + Redux frontend with a secure Express backend.
 
 ---
 
-## 🧠 Key Skills Reinforced
-
-- **Fullstack Development:** integrating frontend (React + Redux + Vite) with backend (Express + Sequelize + PostgreSQL).  
-- **API Design & RESTful Practices:** building CRUD endpoints and managing entity relationships.  
-- **Database Modeling:** using Sequelize ORM to define models and relationships in PostgreSQL.
-- **Security & Best Practices:** configuring CORS (for educational and portfolio purposes, CORS is open to all origins. This configuration allows public access from any frontend during development and testing.), Helmet, and handling environment variables.
-- **Deployment Skills:** deploying backend on Render and frontend on Vercel/Netlify.
-- **Version Control & Collaboration:** GitHub usage with `.gitignore`, `.env.example`, and bilingual documentation.
-- **UI/UX Design:** building a cinematic interface with React-Bootstrap and Bootswatch.
-- **Professional Presentation:** structured README, bilingual content, clear instructions, and demo links.
+## 📌 Key Features
+- **Cinematic UI:** Interface inspired by top-tier streaming platforms.
+- **Smart Relationships:** Assign multiple Actors, Directors, and Genres to any Movie.
+- **Security First:** Implementation of Helmet, CORS, and environment variable management.
+- **Developer Friendly:** Reproducible test scripts and detailed bilingual documentation.
 
 ---
 
-## 📌 Features
+##🧪 Professional Testing Suite (CI/CD)
+The reliability of **GalleryMovies** is backed by an automated testing workflow. Using **Jest** and **Supertest**, the project implements 19+ strategic tests covering:
 
-- CRUD operations for **Genres, Actors, Directors, and Movies.**
-- **Relationships:** movies can have multiple genres, actors, and directors.
-- Secure API with CORS and Helmet.
-- Professional UI inspired by streaming platforms.
-- Deployment-ready with environment variables and documentation.
+- **Full CRUD Operations:** Actors, Genres, Directors, and Movies.
+- **Relationship Integrity:** Validating many-to-many assignments (Actors-to-Movie, Genres-to-Movie).
+- **Automated Workflow:** Every `push` or `pull request` triggers the **GitHub Actions** pipeline, ensuring code stability before deployment.
+
+To run the tests locally:
+```bash
+npm test
+```
+
+---
+
+## 💻🚀 Tech Stack
+
+| Frontend      | Backend       | Testing & CI/CD | Database            | Security & Middleware |
+|---------------|---------------|-----------------|---------------------|-----------------------|
+| React 18      | Node.js       | Jest            | PostgreSQL          | Helmet                |
+| Redux Toolkit | Express       | Supertest       | Render (Deployment) | CORS                  |
+| React Router  | Sequelize ORM | GitHub Actions  | Netlify (Frontend)  |
+| Vite          | Morgan        |                 | NeonDB              |
+| Bootstrap     |                                 | Postman             |
+| Bootswatch    | 
 
 ---
 
 ## 📁 API Endpoints
 
-| Método | Endpoint         | Función |
-|--------|------------------|---------|
+| Method | Endpoint         | Function |
+|--------|------------------|----------|
 | GET    | `/movies`        | Returns all movies with all genres, actors, and directors |
 | POST   | `/movies`        | Create a new movie |
 | GET    | `/movies/:id`    | Return a movie by id searched |
@@ -122,17 +128,60 @@ This project was designed to:
 
 ---
 
-## 💻🚀 Tech Stack
+## 🧪 Test Coverage
 
-| Frontend      | Backend       | Deployment | Database   |
-|---------------|---------------|------------|------------|
-| React 18      | Node.js       | Render     | PostgreSQL |
-| Redux Toolkit | Express       | Netlify    | 
-| React Router  | Sequelize ORM | Postman    |
-| Axios         | PostgreSQL    |
-| Bootstrap     | Helmet        |
-| Vite          | Morgan        |
-| Bootswatch    | CORS          |
+<p align="center">
+<img width="263" height="93" alt="image" src="https://github.com/user-attachments/assets/1d5c6173-ce0a-4a8f-afab-1dcf232a7c2b" />
+</p>
+
+The following endpoints are tested:
+## Actors
+- `GET /actors` – Retrieve all actors
+- `POST /actors` – Create a new actor
+- `DELETE /actors/:id` – Delete an actor by ID
+- `PUT /actors/:id` – Update an actor by ID
+## Genres
+- `GET /genres` – Retrieve all genres
+- `POST /genres` – Create a new genre
+- `DELETE /genres/:id` – Delete a genre by ID
+- `PUT /genres/:id` – Update a genre by ID
+## Directors
+- `GET /directors` – Retrieve all directors
+- `POST /directors` – Create a new director
+- `DELETE /directors/:id` – Delete a director by ID
+- `PUT /directors/:id` – Update a director by ID
+## Movies
+- `GET /movies` – Retrieve all movies
+- `POST /movies` – Create a new movie
+- `DELETE /movies/:id` – Delete a movie by ID
+- `PUT /movies/:id` – Update a movie by ID
+- `POST /movies/:id/actors` – Assign actors to a movie
+- `POST /movies/:id/directors` – Assign directors to a movie
+- `POST /movies/:id/genres` – Assign genres to a movie
+
+---
+
+## 📄 Scripts (package.json)
+```bash
+"scripts": {
+  "dev": "node --watch --env-file=.env src/server.js",
+  "start": "node src/server.js",
+  "test": "node --env-file=.env ./node_modules/jest/bin/jest.js"
+}
+```
+
+---
+
+## 🧠 Key Skills Reinforced
+
+- **Fullstack Development:** integrating frontend (React + Redux + Vite) with backend (Express + Sequelize + PostgreSQL).  
+- **API Design & RESTful Practices:** building CRUD endpoints and managing entity relationships.  
+- **Database Modeling:** using Sequelize ORM to define models and relationships in PostgreSQL.
+- **Security & Best Practices:** configuring CORS (for educational and portfolio purposes, CORS is open to all origins. This configuration allows public access from any frontend during development and testing.), Helmet, and handling environment variables.
+- **Deployment Skills:** deploying backend on Render and frontend on Vercel/Netlify.
+- **Version Control & Collaboration:** GitHub usage with `.gitignore`, `.env.example`, and bilingual documentation.
+- **UI/UX Design:** building a cinematic interface with React-Bootstrap and Bootswatch.
+- **Professional Presentation:** structured README, bilingual content, clear instructions, and demo links.
 
 ---
 
@@ -140,6 +189,9 @@ This project was designed to:
 
 ```bash
 📁 MOVIES-APP
+|   ├── 📁 .github
+│   |   └── 📁 workflows/
+│   |   |   └── main.yml
 |   ├── 📁 movies-app-backend
 │   |   └── 📁 node_modules/
 │   |   └── 📁 src/
@@ -170,8 +222,15 @@ This project was designed to:
 │   |   |    |    └── index.js
 │   |   |    └── app.js
 │   |   |    └── server.js
+│   |   └── 📁 tests/
+│   |   |    └── actors.test.js
+│   |   |    └── directors.test.js
+│   |   |    └── genres.test.js
+│   |   |    └── movies.test.js
+│   |   |    └── setup.js
 |   |   └── .env
 |   |   └── .env.example
+|   |   └── jest.config.js
 |   |   └── package-lock.json
 |   |   └── package.json
 |   ├── 📁 movies-app-frontend
@@ -231,12 +290,14 @@ This project was designed to:
 │   |    └── package.json
 │   |    └── vite.config.js
 |   └── .gitignore
+|   └── README.md
 ```
+
 ---
 
 ## ⚙️ Setup & Installation
 
-## 🔧 Backend Setup
+## 🔧 Backend Setup & Testing
 
 1. Clone this repository:
 
@@ -267,15 +328,27 @@ DATABASE_URL=postgres://user:password@localhost:5432/movies
 CORS_ORIGIN=http://localhost:5173 # -> Frontend URL (leave blank if not applicable)
 ```
 
-5. Run de server in development mode:
+💡 Quick Setup Note: This project includes enviroment variables and configures instructions into .env.example file (remember all enviroment values is with your credentials) for development and testing environments. This facilitates rapid deployment and ensures the test suite runs out-of-the-box without extra security overhead.
+
+5. Run Tests:
+
+```bash
+npm test
+```
+
+6. Run Individual Test:
+
+```bash
+npm test name_file.test.js
+```
+
+7. Run de server in development mode:
 
 ```bash
 npm run dev
 ```
 
-*This way, the backend will be available at: `http://localhost:4000`.*
-
-## 🎬 Frontend Setup
+## 🎬 Frontend Setup & Installation
 
 1. Change directory to movies-app-frontend:
    
@@ -302,25 +375,39 @@ VITE_API_URL=http://localhost:4000/api/v1
 npm run dev
 ```
 
-The application will be available at: `http://localhost:5173`
-
 ---
 
 ## 🎨Author
-Developed by Clio Salgado as part of the Node.js & Backend module at Academlo, with the goal of consolidating skills in database modeling, REST API design, frontend–backend integration, cloud deployment, and professional documentation as part of a fullstack project.
+Developed by Clio Salgado. Focused on building reliable, data-driven fullstack solutions with professional testing standards.
 
 🔽 **Versión en Español** 🔽
 
-## ## 🎬 MoviesApp Fullstack Project
+## 🎬 GalleryMovies: Gestor de Películas Full-Stack y Suite de Pruebas Profesional
 
-Aplicación fullstack profesional construida con **React, Redux, Express, Sequelize y PostgreSQL.** 
-Este proyecto demuestra el diseño de una API escalable, interfaz cinematográfica, componentes reutilizables y arquitectura lista para despliegue, ideal para mostrar habilidades fullstack.
+Aplicación fullstack profesional construída con `React`, `Redux`, `Express`, `Sequelize` y `PostgreSQL`. Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas integral y completa**, mostrando una *interfaz cinemática,  diseño de APIs escalables y arquitectura lista para producción*.
 
-<img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/eb2733b7-9076-44e8-b6a8-c6eaa01fad60" />
+<img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
 
 ---
 
-### 📊 Arquitectura de la Base de Datos (Relación Many-to-Many)
+## 🌐 Deployment
+
+## 🎬🌐 Proyecto FullStack: Frontend en línea con Netlify
+🔗 https://gallerymovies.netlify.app
+
+---
+
+## 🚀 Backend: Servidor en línea con Render
+🔗 https://moviesapp-lc0z.onrender.com
+
+---
+
+## 📄 MoviesCRUD: Documentación en línea con Postman
+🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
+
+---
+
+### 📊 Arquitectura de Base de Datos (Base de Datos Relacional Muchos a Muchos)
 
 ```mermaid
 erDiagram
@@ -356,56 +443,47 @@ erDiagram
 
 ---
 
-## 🌐 Despliegue
+## 🎯 Objetivos de Proyecto
 
-## 🚀 Backend: Servidor en línea desplegado con Render
-🔗 https://moviesapp-lc0z.onrender.com
-
----
-
-## 📄 MoviesCRUD: Documentación en línea desplegada con Postman
-🔗 https://documenter.getpostman.com/view/48309056/2sB3dLUX82
+- **Modelado complejo de datos:** Implementación de bases de datos relacionales muchos a muchos usando el ORM de Sequelize.
+- **Lógica de negocio avanzada:** Cálculo dinámico de asociaciones de películas y filtrado de datos cinematográficos.
+- **Aseguramiento de la Calidad:** Logró total de una cobertura del 100% de la lógica de negocio principal mediante pruebas de integración automatizadas.
+- **Integración fluida y sin fisuras:** Conexión de frontend en React + Redux con backend seguro en Express.
 
 ---
 
-## 🎬🌐 FullStack Project: Aplicación de películas en línea desplegada con Netlify
-🔗 https://galerymovies.netlify.app
+## 📌 Funcionalidades Clave
+- **Interfaz Cinemática:** Interfaz inspirada en las principales plataformas de streaming.
+- **Relaciones Inteligentes:** Asignación de múltiples Actores, Directores y Géneros a cualquier Película.
+- **Seguridad ante todo:** Implementación de Helmet, CORS y gestión de variables de entorno.
+- **Optimizado para Desarrolladores:** Scripts de prueba reproducibles y documentación bilingüe detallada.
 
 ---
 
-## 🎯 Objetivos del Proyecto
+##🧪 Suite de Pruebas Profesional (CI/CD)
+La confiabilidad de **GalleryMovies** está respaldada por un flujo de trabajo de pruebas automatizadas. Utilizando **Jest** y **Supertest**, el proyecto implementa más de 19 pruebas estratégicas que cubren:
 
-Este proyecto fue diseñado para:
+- **Operaciones CRUD Completas:** Actores, Géneros, Directores y Películas.
+- **Integridad de Relaciones:** Validación de asignaciones muchos-a-muchos (Actores a Película, Géneros a Película).
+- **Flujo de Trabajo Automatizado:** Cada `push` o `pull request` activa el pipeline de GitHub Actions, garantizando la estabilidad del código antes del despliegue.
 
-- Diseñar y construir una API de películas con modelos de géneros, actores, directores y películas.
-- Implementar relaciones complejas: una película puede tener múltiples géneros, actores y directores.
-- Desarrollar endpoints CRUD completos para cada entidad, asegurando operaciones de creación, lectura, actualización y eliminación.  
-- Incluir endpoints avanzados para asignar géneros, actores y directores a películas mediante relaciones dinámicas.
-- Desplegar el backend en Render y verificar su funcionamiento con datos reales (al menos dos películas creadas).
-- Integrar un frontend en React que consuma la API, mostrando una interfaz cinematográfica inspirada en plataformas de streaming.
-- Documentar el proyecto profesionalmente con README, `.env.example` y estructura clara para fácil clonación y ejecución.
----
-
-## 🧠 Habilidades Clave Reforzadas
-
-- **Desarrollo Fullstack:** Integración de frontend (React + Redux + Vite) con backend (Express + Sequelize + PostgreSQL). 
-- **Diseño de APIs REST:** Construcción de endpoints CRUD y manejo de relaciones entre entidades.
-- **Modelado de Bases de Datos:** Uso de Sequelize ORM para definir modelos y relaciones en PostgreSQL.
-- **Seguridad y Buenas Prácticas:** Configuración de CORS (por motivos educativos y de portafolio CORS está abierto a todos los orígenes. Esta configuración permite el acceso público desde cualquier frontend durante el desarrollo y pruebas), Helmet y manejo de variables de entorno.
-- **Despliegue de Proyectos:** Despliegue de proyectos backend en Render y frontend en Netlify.
-- **Control de Versiones y Colaboración:** Uso de GitHub con `.gitignore`, `.env.example` y documentación bilingüe.
-- **Diseño UX/UI:** Interfaz cinematográfica con React-Bootstrap y Bootswatch.
-- **Presentación Profesional:** README estructurado, bilingüe, instrucciones claras y enlaces de demo.
+Para correr los test localmente copia y pega el siguiente comando:
+```bash
+npm test
+```
 
 ---
 
-## 📌 Funcionalidades
+## 💻🚀 Tech Stack
 
-- CRUD para **Géneros, Actores, Directores y Películas.**
-- **Relaciones:** Las películas pueden tener múltiples géneros, actores y directores.
-- API segura con CORS y Helmet.
-- Interfaz profesional inspirada en plataformas de streaming.
-- Proyecto listo para despliegue con variables de entorno y documentación.
+| Frontend      | Backend       | Testing e Integración Continua (CI/CD) | Base de Datos       | Seguridad y Middlewares |
+|---------------|---------------|----------------------------------------|---------------------|-------------------------|
+| React 18      | Node.js       | Jest                                   | PostgreSQL          | Helmet                  |
+| Redux Toolkit | Express       | Supertest                              | Render (Deployment) | CORS                    |
+| React Router  | Sequelize ORM | GitHub Actions                         | Netlify (Frontend)  |
+| Vite          | Morgan        |                                        | NeonDB              |
+| Bootstrap     |               |                                        | Postman             |
+| Bootswatch    |               |
 
 ---
 
@@ -413,13 +491,13 @@ Este proyecto fue diseñado para:
 
 | Método | Endpoint         | Función |
 |--------|------------------|---------|
-| GET    | `/movies`        | Devuelve todas las películas con sus géneros, actores y directores |
+| GET    | `/movies`        | Devuelve todas las películas con todos los géneros, actores y directores |
 | POST   | `/movies`        | Crea una nueva película |
-| GET    | `/movies/:id`    | Regresa la película correspondiente al id solicitado |
-| PUT    | `/movies/:id`    | Actualiza la pleícula con el id solicitado |
-| DELETE | `/movies/:id`     | Elimina una película con el id solicitado |
+| GET    | `/movies/:id`    | Devuelve una película por id |
+| PUT    | `/movies/:id`    | Actualiza una película por id |
+| DELETE | `/movies/:id`    | Elimina una película por id |
 
-*Nota: Endpoints de un CRUD estándar aplicables igualmente para géneros, actores y directores.*
+*Nota: Los endpoints CRUD estándar para todos los modelos son igualmente aplicables a géneros (genres), actores (actors) y directores (directors).*
 
 ---
 
@@ -427,31 +505,77 @@ Este proyecto fue diseñado para:
 
 | Modelo      | Campos   |            
 |-------------|----------|
-| Géneros     | id, name | 
-| Actores     | id, first_name, last_name, nationality, image, birthday | 
-| Directores  | id, first_name, last_name, nationality, image, birthday | 
-| Películas   | id, name, image, synopsis, release_year | 
+| Genres      | id, name | 
+| Actors      | id, first_name, last_name, nationality, image, birthday | 
+| Directors   | id, first_name, last_name, nationality, image, birthday | 
+| Movies      | id, name, image, synopsis, release_year | 
 
 ---
 
-## 💻🚀 Tecnologías usadas
+## 🧪 Cobertura de tests
 
-| Frontend      | Backend       | Despliegue | Base de Datos |
-|---------------|---------------|------------|---------------|
-| React 18      | Node.js       | Render     | PostgreSQL |
-| Redux Toolkit | Express       | Netlify    | 
-| React Router  | Sequelize ORM | Postman    |
-| Axios         | PostgreSQL    |
-| Bootstrap     | Helmet        |
-| Vite          | Morgan        |
-| Bootswatch    | CORS          |
+<p align="center">
+<img width="263" height="93" alt="image" src="https://github.com/user-attachments/assets/1d5c6173-ce0a-4a8f-afab-1dcf232a7c2b" />
+</p>
+
+Se testearon los siguientes endpoints:
+## Actores
+- `GET /actors` – Obtener todos los actores
+- `POST /actors` – Crear un nuevo actor
+- `DELETE /actors/:id` – Eliminar un actor por ID
+- `PUT /actors/:id` – Actualizar un actor por ID
+## Géneros
+- `GET /genres` – Obtener todos los géneros
+- `POST /genres` – Crear un nuevo género
+- `DELETE /genres/:id` – Eliminar un género por ID
+- `PUT /genres/:id` – Actualizar un género por ID
+## Directores
+- `GET /directors` – Obtener todos los directores
+- `POST /directors` – Crear un nuevo director
+- `DELETE /directors/:id` – Eliminar un director por ID
+- `PUT /directors/:id` – Actualizar un director por ID
+## Películas
+- `GET /movies` – Obtener todas las películas
+- `POST /movies` – Crear una nueva película
+- `DELETE /movies/:id` – Eliminar una película por ID
+- `PUT /movies/:id` – Actualizar una película por ID
+- `POST /movies/:id/actors` – Asiganr actores a una película
+- `POST /movies/:id/directors` – Asignar directores a una película
+- `POST /movies/:id/genres` – Asignar géneros a una película
+  
+---
+
+## 📄 Scripts (package.json)
+```bash
+"scripts": {
+  "dev": "node --watch --env-file=.env src/server.js",
+  "start": "node src/server.js",
+  "test": "node --env-file=.env ./node_modules/jest/bin/jest.js"
+}
+```
 
 ---
 
-## 🗂️ Estructura del proyecto
+## 🧠 Habilidades Clave Reforzadas
+
+- **Desarrollo Full-Stack:** Integración de frontend (React + Redux + Vite) con un backend robusto (Express + Sequelize + PostgreSQL).
+- **Diseño de APIs y Prácticas RESTful:** Construcción de endpoints CRUD y gestión avanzada de relaciones entre entidades.  
+- **Modelado de Bases de Datos:** Uso de Sequelize ORM para definir modelos relacionales y asociaciones complejas en PostgreSQL.
+- **Seguridad y Mejores Prácticas:** Configuración de Helmet, gestión de variables de entorno y control de CORS (configurado para permitir acceso público durante la fase de desarrollo y pruebas en el portafolio).
+- **Habilidades de Despliegue (Deployment):** Despliegue del backend en Render y del frontend en plataformas como Vercel o Netlify.
+- **Control de Versiones y Colaboración:** Uso profesional de GitHub con archivos `.gitignore`, `.env.example`, y documentación técnica bilingüe.
+- **Diseño UI/UX:** Creación de una interfaz cinematográfica fluida utilizando React-Bootstrap y Bootswatch.
+- **Presentación Profesional:** Estructuración de un README detallado, contenido bilingüe, instrucciones claras y enlaces directos a la demo.
+
+---
+
+## 🗂️ Estructura del Proyecto
 
 ```bash
 📁 MOVIES-APP
+|   ├── 📁 .github
+│   |   └── 📁 workflows/
+│   |   |   └── main.yml
 |   ├── 📁 movies-app-backend
 │   |   └── 📁 node_modules/
 │   |   └── 📁 src/
@@ -482,8 +606,15 @@ Este proyecto fue diseñado para:
 │   |   |    |    └── index.js
 │   |   |    └── app.js
 │   |   |    └── server.js
+│   |   └── 📁 tests/
+│   |   |    └── actors.test.js
+│   |   |    └── directors.test.js
+│   |   |    └── genres.test.js
+│   |   |    └── movies.test.js
+│   |   |    └── setup.js
 |   |   └── .env
 |   |   └── .env.example
+|   |   └── jest.config.js
 |   |   └── package-lock.json
 |   |   └── package.json
 |   ├── 📁 movies-app-frontend
@@ -543,12 +674,13 @@ Este proyecto fue diseñado para:
 │   |    └── package.json
 │   |    └── vite.config.js
 |   └── .gitignore
+|   └── README.md
 ```
+
 ---
 
-## ⚙️ Instalación y Configuración
-
-## 🔧 Backend 
+## ⚙️ Configuración e Instalación
+## 🔧 Configuración del backend y testing
 
 1. Clona este repositorio:
 
@@ -556,7 +688,7 @@ Este proyecto fue diseñado para:
 git clone https://github.com/Clic-stack/MoviesApp-FullStack-Project.git
 ```
 
-2. Entra a la carpeta movies-app-backend:
+2. Cambia a la carpeta movies-app-backend:
 
 ```bash
 cd movies-app-backend
@@ -568,28 +700,40 @@ cd movies-app-backend
 npm install
 ```
 
-4. Configura las variables de entorno:
-- Cambia el nombre del archivo de `.env.example` a `.env`
-- Modifica los valores de las variables necesarias.
+4. Configura variables de entorno:
+- Cambia el nombre del archivo `.env.example` a `.env`
+- Modifica los valores de las variables.
 - Ejemplo de configuración:
 
 ```bash
-PORT=4000 # -> Cambia este valor por el del servidor que estes implementando
+PORT=4000 # -> Change for your server
 DATABASE_URL=postgres://user:password@localhost:5432/movies
-#CORS_ORIGIN=http://localhost:5173 # -> URL del frontend (deja el valor vacio si no aplica)
+CORS_ORIGIN=http://localhost:5173 # -> Frontend URL (leave blank if not applicable)
 ```
 
-5. Corre el servidor en modo desarrollo:
+💡 Nota para Configuración Rápida: Este proyecto incluye variables de entorno e instrucciones de configuración en el archivo `.env.example` (recuerda que todos los valores deben corresponder a tus propias credenciales) para entornos de desarrollo y pruebas. Esto facilita un despliegue rápido y garantiza que la suite de pruebas funcione de inmediato (out-of-the-box) sin configuraciones de seguridad adicionales.
+
+5. Corre los tests:
+
+```bash
+npm test
+```
+
+6. Corre el test individualmente:
+
+```bash
+npm test name_file.test.js
+```
+
+7. Corre el servidor:
 
 ```bash
 npm run dev
 ```
 
-*De esta forma, el backend queda disponible en: `http://localhost:4000`.*
+## 🎬 Configuración e Instalación del Frontend
 
-## 🎬 Instalación Frontend
-
-1. Cambia el directorio o ruta a movies-app-frontend:
+1. Cambia la terminal a la ruta movies-app-frontend:
    
 ```bash
 cd movies-app-frontend
@@ -601,22 +745,20 @@ cd movies-app-frontend
 npm install
 ```
 
-3. Configura las variables de entorno usando el archivo `.env.example` y cambia el nombre de ese archivo por `.env`:
+3. Configura las variables de entorno usando el archivo `.env.example` y cambia el nombre del archivo a `.env`:
 
 ```bash
 VITE_API_URL=http://localhost:4000/api/v1
 ```
-*Nota: Asegurate que la URL que coloques sea la tu backend.*
+*Nota: Asegúrate de colocar correctamente la URL de tu backend*
 
-4. Corre el servidor de desarrollo:
+4. Corre el servidor:
 
 ```bash
 npm run dev
 ```
 
-La aplicación estará disponible en: `http://localhost:5173`
-
 ---
 
 ## 🎨Author
-Desarrollado por Clio Salgado como parte del módulo de Node.js & Backend en Academlo, con el objetivo de consolidar habilidades en modelado de bases de datos, diseño de APIs REST, integración de frontend y backend, despliegue en la nube y documentación profesional como parte de un proyecto fullstack.
+Desarrollado por Clio Salgado. Enfocado en la construcción de soluciones full-stack confiables y basadas en datos, con estándares profesionales de testing.
