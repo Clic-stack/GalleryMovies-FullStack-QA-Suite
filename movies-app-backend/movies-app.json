@@ -1,0 +1,619 @@
+{
+  "info": {
+    "_postman_id": "19d7a0ae-64cc-4522-b044-a329e0bbe8be",
+    "name": "Movies App API",
+    "description": "# 🎬 Movies App API\n\nThis API allows you to manage movies, actors, directors, and genres.  \nBuilt with Express.js and PostgreSQL, deployed on Render, and consumed by a React frontend hosted on Netlify.\n\n## Base URL\n\n`https://moviesapp-lc0z.onrender.com`\n\n## Entities\n\n- 🎭 Actors\n    \n- 🎬 Directors\n    \n- 🎞️ Movies\n    \n- 🏷️ Genres\n    \n\n## Authentication\n\nNo authentication required.\n\n## CORS\n\nCORS is currently open to all origins for educational and portfolio purposes. This configuration allows public access from any frontend during development and testing.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48309056",
+    "_collection_link": "https://go.postman.co/collection/48309056-19d7a0ae-64cc-4522-b044-a329e0bbe8be?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Actors",
+      "item": [
+        {
+          "name": "Get All Actors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/actors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "actors"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve all actors from database.\n\n### **Correct Response:**\n\n``` json\n[\n     {\n        \"birthday\": \"1988-11-06\",\n        \"id\": 1,\n        \"first_name\": \"Emma\",\n        \"last_name\": \"Stone\",\n        \"nationality\": \"American\",\n        \"image\": \"https://tse4.mm.bing.net/th/id/OIP._QUirznXzIB9rGF73m69SQHaLI?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T01:34:51.650Z\",\n        \"updatedAt\": \"2025-11-28T01:34:51.650Z\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"name\": \"Poor Things\",\n                \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n                \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n                \"release_year\": 2023,\n                \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n                \"updatedAt\": \"2025-11-29T18:33:28.771Z\",\n                \"actors_movies\": {\n                    \"createdAt\": \"2025-11-28T01:47:27.957Z\",\n                    \"updatedAt\": \"2025-11-28T01:47:27.957Z\",\n                    \"actorId\": 1,\n                    \"movieId\": 1\n                }\n            }\n        ]\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Actor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/actors/8",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "actors",
+                "8"
+              ]
+            },
+            "description": "### Description:\n\nRetrieve one actor by id from database.\n\n### Correct Response:\n\n``` json\n{\n    \"birthday\": \"1994-10-23\",\n    \"id\": 8,\n    \"first_name\": \"Margaret \",\n    \"last_name\": \"Qualley\",\n    \"nationality\": \"American\",\n    \"image\": \"https://th.bing.com/th/id/OIP.JZJREyv6GxvKRp4BIkm9qwHaJ4?w=178&h=237&c=7&r=0&o=7&pid=1.7&rm=3\",\n    \"createdAt\": \"2025-11-28T01:44:34.240Z\",\n    \"updatedAt\": \"2025-11-28T01:44:34.240Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Create An Actor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"first_name\": \"Zendaya\",\r\n    \"last_name\": \"Stoermer\",\r\n    \"nationality\": \"American\",  \r\n    \"image\": \"https://tse1.explicit.bing.net/th/id/OIP.mOvc4m-2yQTNssMhdG6V0AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3\",\r\n    \"birthday\": \"1996-09-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/actors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "actors"
+              ]
+            },
+            "description": "### **Description:**\n\nCreate a new actor into database.\n\n### Correct Response:\n\n``` json\n{\n    \"birthday\": \"1996-09-01\",\n    \"id\": 34,\n    \"first_name\": \"Zendaya\",\n    \"last_name\": \"Stoermer\",\n    \"nationality\": \"American\",\n    \"image\": \"https://tse1.explicit.bing.net/th/id/OIP.mOvc4m-2yQTNssMhdG6V0AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3\",\n    \"updatedAt\": \"2025-11-29T20:23:59.211Z\",\n    \"createdAt\": \"2025-11-29T20:23:59.211Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Actor",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"first_name\": \"Margaret\",\r\n    \"last_name\": \"Qualley\",\r\n    \"nationality\": \"American\",\r\n    \"image\": \"https://goldenglobes.com/wp-content/uploads/2023/10/margaret-qualley-2020-gg-1.jpg\",\r\n    \"birthday\": \"1994-10-23\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/actors/8",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "actors",
+                "8"
+              ]
+            },
+            "description": "### Description:\n\nUpdate one actor by id from database.\n\n### Correct Response:\n\n``` json\n{\n    \"birthday\": \"1994-10-23\",\n    \"id\": 8,\n    \"first_name\": \"Margaret \",\n    \"last_name\": \"Qualley\",\n    \"nationality\": \"American\",\n    \"image\": \"https://th.bing.com/th/id/OIP.JZJREyv6GxvKRp4BIkm9qwHaJ4?w=178&h=237&c=7&r=0&o=7&pid=1.7&rm=3\",\n    \"createdAt\": \"2025-11-28T01:44:34.240Z\",\n    \"updatedAt\": \"2025-11-28T01:44:34.240Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Actor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/actors/34",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "actors",
+                "34"
+              ]
+            },
+            "description": "### **Description:**\n\nDelete an actor into database by id.\n\n### Correct Response:\n\n<img src=\"https://content.pstmn.io/4111f47a-3d9e-4f62-8d61-9da4ecac7278/aW1hZ2UucG5n\" width=\"934\" height=\"194\">"
+          },
+          "response": []
+        }
+      ],
+      "description": "## 📘 Actors API Documentation\n\n### 🧾 Overview\n\nThis collection manages **actor resources** in the Movies App API.  \nIt allows you to create, read, update, and delete actors, as well as retrieve detailed information for each one.\n\n### 🌐 Base URL\n\nCódigo\n\n```\nhttps://moviesapp-lc0z.onrender.com\n\n ```\n\n### 📌 Endpoints\n\n| Method | Endpoint | Description |\n| --- | --- | --- |\n| GET | `/api/actors` | Get all actors |\n| GET | `/api/actors/:id` | Get a single actor by ID |\n| POST | `/api/actors` | Create a new actor |\n| PUT | `/api/actors/:id` | Update an existing actor |\n| DELETE | `/api/actors/:id` | Delete an actor |\n\n### 🧩 Request Body (POST / PUT)\n\n```\n{\n    \"first_name\": \"Zendaya\",\n    \"last_name\": \"Stoermer\",\n    \"nationality\": \"American\",  \n    \"image\": \"https://tse1.explicit.bing.net/th/id/OIP.mOvc4m-2yQTNssMhdG6V0AHaLH?rs=1&pid=ImgDetMain&o=7&rm=3\",\n    \"birthday\": \"1996-09-01\"\n}\n\n ```\n\n- `first_name` (string) – required\n    \n- `last_name` (string) – required\n    \n- `nationality` (string) – required\n    \n- `image` (text) – required\n    \n- `birthday` (dateonly) – required\n    \n\n### 🛡️ Authentication\n\nNo authentication required.  \nCORS is currently open to all origins for educational and portfolio purposes. This configuration allows public access from any frontend during development and testing.\n\n### 🧠 Notes\n\n- All responses are in JSON format.\n    \n- Actor IDs are auto-generated.\n    \n- Nationality should be a valid country name or abbreviation."
+    },
+    {
+      "name": "Directors",
+      "item": [
+        {
+          "name": "Get All Directors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/directors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "directors"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve all directors from database.\n\n### **Correct Response:**\n\n``` json\n[\n     {\n        \"id\": 1,\n        \"first_name\": \"Yorgos\",\n        \"last_name\": \"Lánthimos\",\n        \"nationality\": \"Greek\",\n        \"image\": \"https://cdn.britannica.com/03/254603-050-0EB2CF79/director-yorgos-lanthimos-venice-international-film-festival-venice-italy-2023.jpg\",\n        \"birthday\": \"1973-09-23\",\n        \"createdAt\": \"2025-11-28T01:33:06.370Z\",\n        \"updatedAt\": \"2025-11-28T01:33:06.370Z\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"name\": \"Poor Things\",\n                \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n                \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n                \"release_year\": 2023,\n                \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n                \"updatedAt\": \"2025-11-29T18:33:28.771Z\",\n                \"directors_movies\": {\n                    \"createdAt\": \"2025-11-28T01:47:27.661Z\",\n                    \"updatedAt\": \"2025-11-28T01:47:27.661Z\",\n                    \"directorId\": 1,\n                    \"movieId\": 1\n                }\n            }\n        ]\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Director",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/directors/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "directors",
+                "1"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve one director from database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 1,\n    \"first_name\": \"Yorgos\",\n    \"last_name\": \"Lánthimos\",\n    \"nationality\": \"Greek\",\n    \"image\": \"https://cdn.britannica.com/03/254603-050-0EB2CF79/director-yorgos-lanthimos-venice-international-film-festival-venice-italy-2023.jpg\",\n    \"birthday\": \"1973-09-23\",\n    \"createdAt\": \"2025-11-28T01:33:06.370Z\",\n    \"updatedAt\": \"2025-11-28T01:33:06.370Z\"\n}\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Create One Director",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"first_name\": \"Christopher\",\r\n    \"last_name\": \"Nolan\",\r\n    \"nationality\": \"American and British\",\r\n    \"image\": \"https://en.wikipedia.org/wiki/Christopher_Nolan#/media/File:ChrisNolanBFI150224_(10_of_12)_(53532289710)_(cropped2).jpg\",\r\n    \"birthday\": \"1970-07-30\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/directors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "directors"
+              ]
+            },
+            "description": "### **Description:**\n\nCreate one director into database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 5,\n    \"first_name\": \"Christopher\",\n    \"last_name\": \"Nolan\",\n    \"nationality\": \"American and British\",\n    \"image\": \"https://en.wikipedia.org/wiki/Christopher_Nolan#/media/File:ChrisNolanBFI150224_(10_of_12)_(53532289710)_(cropped2).jpg\",\n    \"birthday\": \"1970-07-30\",\n    \"updatedAt\": \"2025-11-29T20:48:49.306Z\",\n    \"createdAt\": \"2025-11-29T20:48:49.306Z\"\n}\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Director",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"first_name\": \"Christopher\",\r\n    \"last_name\": \"Nolan\",\r\n    \"nationality\": \"American and British\",\r\n    \"image\": \"https://tse4.mm.bing.net/th/id/OIP.Mv26-KSaRBqUENda8GIXwwHaLI?rs=1&pid=ImgDetMain&o=7&rm=3\",\r\n    \"birthday\": \"1970-07-30\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/directors/3",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "directors",
+                "3"
+              ]
+            },
+            "description": "### **Description:**\n\nUpdate one director from database by id.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 3,\n    \"first_name\": \"Christopher\",\n    \"last_name\": \"Nolan\",\n    \"nationality\": \"American and British\",\n    \"image\": \"https://tse4.mm.bing.net/th/id/OIP.Mv26-KSaRBqUENda8GIXwwHaLI?rs=1&pid=ImgDetMain&o=7&rm=3\",\n    \"birthday\": \"1970-07-30\",\n    \"createdAt\": \"2025-11-28T02:13:12.294Z\",\n    \"updatedAt\": \"2025-11-29T20:51:04.016Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Director",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/directors/5",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "directors",
+                "5"
+              ]
+            },
+            "description": "### **Description:**\n\nDelete one director from database by id.\n\n### **Correct Response:**\n\n<img src=\"https://content.pstmn.io/4994152b-92cc-450a-a9c7-5baeeaea6d8d/aW1hZ2UucG5n\" alt=\"\" height=\"156\" width=\"935\">"
+          },
+          "response": []
+        }
+      ],
+      "description": "## 📘 Directors API Documentation\n\n### 🧾 Overview\n\nThis collection manages **director resources** in the Movies App API.  \nIt allows you to create, read, update, and delete directors, as well as retrieve detailed information for each one.\n\n### 🌐 Base URL\n\nCódigo\n\n```\nhttps://moviesapp-lc0z.onrender.com\n\n ```\n\n### 📌 Endpoints\n\n| Method | Endpoint | Description |\n| --- | --- | --- |\n| GET | `/api/directors` | Get all directors |\n| GET | `/api/directors/:id` | Get a single director by ID |\n| POST | `/api/directors` | Create a new director |\n| PUT | `/api/directors/:id` | Update an existing director |\n| DELETE | `/api/directors/:id` | Delete a director |\n\n### 🧩 Request Body (POST / PUT)\n\njson\n\n```\n{\n    \"first_name\": \"Christopher\",\n    \"last_name\": \"Nolan\",\n    \"nationality\": \"American and British\",\n    \"image\": \"https://en.wikipedia.org/wiki/Christopher_Nolan#/media/File:ChrisNolanBFI150224_(10_of_12)_(53532289710)_(cropped2).jpg\",\n    \"birthday\": \"1970-07-30\"\n}\n\n ```\n\n- `first_name` (string) – required\n    \n- `last_name` (string) – required\n    \n- `nationality` (string) – required\n    \n- `image` (text) – required\n    \n- `birthday` (dateonly) – required\n    \n\n### 🛡️ Authentication\n\nNo authentication required.  \nCORS is currently open to all origins for educational and portfolio purposes. This configuration allows public access from any frontend during development and testing.\n\n### 🧠 Notes\n\n- All responses are in JSON format.\n    \n- Director IDs are auto-generated.\n    \n- Nationality should be a valid country name or abbreviation."
+    },
+    {
+      "name": "Genres",
+      "item": [
+        {
+          "name": "Get All Genres",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/genres",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve all genres from database.\n\n### **Correct Response:**\n\n``` json\n[\n     {\n        \"id\": 1,\n        \"name\": \"Scientific Fantasy\",\n        \"createdAt\": \"2025-11-28T01:30:08.187Z\",\n        \"updatedAt\": \"2025-11-28T01:30:08.187Z\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"name\": \"Poor Things\",\n                \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n                \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n                \"release_year\": 2023,\n                \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n                \"updatedAt\": \"2025-11-29T18:33:28.771Z\",\n                \"genres_movies\": {\n                    \"createdAt\": \"2025-11-28T01:47:27.358Z\",\n                    \"updatedAt\": \"2025-11-28T01:47:27.358Z\",\n                    \"genreId\": 1,\n                    \"movieId\": 1\n                }\n            }\n        ]\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Genre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/genres/4",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "4"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve one genre from database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 4,\n    \"name\": \"Biographic\",\n    \"createdAt\": \"2025-11-28T01:53:19.339Z\",\n    \"updatedAt\": \"2025-11-28T01:53:19.339Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Create One Genre",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"History\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/genres",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "genres"
+              ]
+            },
+            "description": "### **Description:**\n\nCreate one genre into database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 4,\n    \"name\": \"Biographic\",\n    \"createdAt\": \"2025-11-28T01:53:19.339Z\",\n    \"updatedAt\": \"2025-11-28T01:53:19.339Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Genre",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Ciencia Ficción\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/genres/4",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "4"
+              ]
+            },
+            "description": "### **Description:**\n\nUpdate one genre from database by id.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 4,\n    \"name\": \"Ciencia Ficción\",\n    \"createdAt\": \"2025-11-28T01:53:19.339Z\",\n    \"updatedAt\": \"2025-11-29T21:10:57.892Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Genre",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/genres/12",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "genres",
+                "12"
+              ]
+            },
+            "description": "### **Description:**\n\nDelete one genre from database by id.\n\n### **Correct Response:**\n\n<img src=\"https://content.pstmn.io/dacf502f-2bac-4f05-b08a-e1dc0f7dcbae/aW1hZ2UucG5n\" alt=\"\" height=\"140\" width=\"937\">"
+          },
+          "response": []
+        }
+      ],
+      "description": "## 📘 Genres API Documentation\n\n### 🧾 Overview\n\nThis collection manages **genre resources** in the Movies App API.  \nIt allows you to create, read, update, and delete genres, as well as retrieve detailed information for each one.\n\n### 🌐 Base URL\n\nCódigo\n\n```\nhttps://moviesapp-lc0z.onrender.com\n\n ```\n\n### 📌 Endpoints\n\n| Method | Endpoint | Description |\n| --- | --- | --- |\n| GET | `/api/genres` | Get all genres |\n| GET | `/api/genres/:id` | Get a single genre by ID |\n| POST | `/api/genres` | Create a new genre |\n| PUT | `/api/genres/:id` | Update an existing genre |\n| DELETE | `/api/genres/:id` | Delete a genre |\n\n### 🧩 Request Body (POST / PUT)\n\njson\n\n```\n{\n  \"name\": \"Drama\"\n}\n\n ```\n\n- `name` (string) – required\n    \n\n### 🛡️ Authentication\n\nNo authentication required.  \nCORS is currently open to all origins for educational and portfolio purposes. This configuration allows public access from any frontend during development and testing.  \n\n### 🧠 Notes\n\n- All responses are in JSON format.\n    \n- Genre IDs are auto-generated.\n    \n- Genre names should be unique and descriptive."
+    },
+    {
+      "name": "Movies",
+      "item": [
+        {
+          "name": "Get All Movies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/movies",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "movies"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve all movies from database.\n\n### **Correct Response:**\n\n``` json\n[\n     {\n        \"id\": 1,\n        \"name\": \"Poor Things\",\n        \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n        \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n        \"release_year\": 2023,\n        \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n        \"updatedAt\": \"2025-11-29T18:33:28.771Z\",\n        \"genres\": [\n            {\n                \"id\": 1,\n                \"name\": \"Scientific Fantasy\",\n                \"createdAt\": \"2025-11-28T01:30:08.187Z\",\n                \"updatedAt\": \"2025-11-28T01:30:08.187Z\",\n                \"genres_movies\": {\n                    \"createdAt\": \"2025-11-28T01:47:27.358Z\",\n                    \"updatedAt\": \"2025-11-28T01:47:27.358Z\",\n                    \"genreId\": 1,\n                    \"movieId\": 1\n                }\n            }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Get One Movie",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1"
+              ]
+            },
+            "description": "### **Description:**\n\nRetrieve one movie from database by id.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 1,\n    \"name\": \"Poor Things\",\n    \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n    \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n    \"release_year\": 2023,\n    \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n    \"updatedAt\": \"2025-11-29T18:33:28.771Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Create One Movie",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Oppenheimer\",\r\n    \"image\": \"https://resizing.flixster.com/5bbfOrn5Stku1HxlkK4ISYi2uQk=/206x305/v2/https://resizing.flixster.com/dV1vfa4w_dB4wzk7A_VzThWUWw8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEyZDMyYjZmLThmNzAtNDliNC1hMjFmLTA2ZWY4M2UyMjJhMi5qcGc=\",\r\n    \"synopsis\": \"During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.\",\r\n    \"release_year\": 2023\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies"
+              ]
+            },
+            "description": "### **Description:**\n\nCreate one movie into database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 5,\n    \"name\": \"Oppenheimer\",\n    \"image\": \"https://resizing.flixster.com/5bbfOrn5Stku1HxlkK4ISYi2uQk=/206x305/v2/https://resizing.flixster.com/dV1vfa4w_dB4wzk7A_VzThWUWw8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEyZDMyYjZmLThmNzAtNDliNC1hMjFmLTA2ZWY4M2UyMjJhMi5qcGc=\",\n    \"synopsis\": \"During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.\",\n    \"release_year\": 2023,\n    \"updatedAt\": \"2025-11-29T21:55:38.576Z\",\n    \"createdAt\": \"2025-11-29T21:55:38.576Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Set Genres to Movies",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[4, 5, 6, 8]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/5/genres",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "5",
+                "genres"
+              ]
+            },
+            "description": "### **Description:**\n\nAdd genres by id genres to movie by id movie.\n\n### **Correct Response:**\n\n``` json\n[\n    {\n        \"id\": 5,\n        \"name\": \"Suspense\",\n        \"createdAt\": \"2025-11-28T01:53:35.294Z\",\n        \"updatedAt\": \"2025-11-28T01:53:35.294Z\",\n        \"genres_movies\": {\n            \"createdAt\": \"2025-11-29T22:00:58.705Z\",\n            \"updatedAt\": \"2025-11-29T22:00:58.705Z\",\n            \"genreId\": 5,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Drama\",\n        \"createdAt\": \"2025-11-28T01:53:48.061Z\",\n        \"updatedAt\": \"2025-11-28T01:53:48.061Z\",\n        \"genres_movies\": {\n            \"createdAt\": \"2025-11-29T22:00:58.705Z\",\n            \"updatedAt\": \"2025-11-29T22:00:58.705Z\",\n            \"genreId\": 6,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"id\": 8,\n        \"name\": \"War Film\",\n        \"createdAt\": \"2025-11-28T02:09:25.312Z\",\n        \"updatedAt\": \"2025-11-28T02:09:25.312Z\",\n        \"genres_movies\": {\n            \"createdAt\": \"2025-11-29T22:00:58.705Z\",\n            \"updatedAt\": \"2025-11-29T22:00:58.705Z\",\n            \"genreId\": 8,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Ciencia Ficción\",\n        \"createdAt\": \"2025-11-28T01:53:19.339Z\",\n        \"updatedAt\": \"2025-11-29T21:10:57.892Z\",\n        \"genres_movies\": {\n            \"createdAt\": \"2025-11-29T22:00:58.705Z\",\n            \"updatedAt\": \"2025-11-29T22:00:58.705Z\",\n            \"genreId\": 4,\n            \"movieId\": 5\n        }\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Set Actors to Movies",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[19, 20, 21, 22, 23, 24, 25, 26, 27]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/5/actors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "5",
+                "actors"
+              ]
+            },
+            "description": "### **Description:**\n\nAdd actors by id actors to movie by id movie.\n\n### **Correct Response:**\n\n``` json\n[\n    {\n        \"birthday\": \"1981-06-09\",\n        \"id\": 19,\n        \"first_name\": \"Natalie \",\n        \"last_name\": \"Portman\",\n        \"nationality\": \"Israelí and American\",\n        \"image\": \"https://tse4.mm.bing.net/th/id/OIP.hFgZ7RYUBUrSXboLTS_ZpwHaLH?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:14:49.228Z\",\n        \"updatedAt\": \"2025-11-28T02:14:49.228Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 19,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1966-11-23\",\n        \"id\": 20,\n        \"first_name\": \"Vincent \",\n        \"last_name\": \"Cassel\",\n        \"nationality\": \"French and Brazillian\",\n        \"image\": \"https://tse4.mm.bing.net/th/id/OIP.ERm9H2qf9UAl9YaA-KiK-QHaKP?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:16:25.117Z\",\n        \"updatedAt\": \"2025-11-28T02:16:25.117Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 20,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1983-08-14\",\n        \"id\": 21,\n        \"first_name\": \"Mila \",\n        \"last_name\": \"Kunis\",\n        \"nationality\": \"American\",\n        \"image\": \"https://tse4.mm.bing.net/th/id/OIP.p2OXerFUZ5CZXt6xzEaG3QHaLJ?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:18:01.283Z\",\n        \"updatedAt\": \"2025-11-28T02:18:01.283Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 21,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1948-02-05\",\n        \"id\": 22,\n        \"first_name\": \"Barbara \",\n        \"last_name\": \"Hershey\",\n        \"nationality\": \"American\",\n        \"image\": \"https://image.tmdb.org/t/p/original/6swwfge3HlvyBVRSNwroFtMcgNB.jpg\",\n        \"createdAt\": \"2025-11-28T02:19:09.465Z\",\n        \"updatedAt\": \"2025-11-28T02:19:09.465Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 22,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1971-10-29\",\n        \"id\": 23,\n        \"first_name\": \"Winona \",\n        \"last_name\": \"Ryder\",\n        \"nationality\": \"American\",\n        \"image\": \"https://tse3.mm.bing.net/th/id/OIP.-d1TgpV4z-95P1-is1u7tgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:20:23.359Z\",\n        \"updatedAt\": \"2025-11-28T02:20:23.359Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 23,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1995-12-27\",\n        \"id\": 24,\n        \"first_name\": \"Timothée \",\n        \"last_name\": \"Chalamet\",\n        \"nationality\": \"French and American\",\n        \"image\": \"https://tse2.mm.bing.net/th/id/OIP.ZN-wu5trndQMkvatcLTIdQHaJY?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:26:49.500Z\",\n        \"updatedAt\": \"2025-11-28T02:26:49.500Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 24,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1983-10-19\",\n        \"id\": 25,\n        \"first_name\": \"Rebecca \",\n        \"last_name\": \"Ferguson\",\n        \"nationality\": \"Swedish\",\n        \"image\": \"https://tse3.mm.bing.net/th/id/OIP.ouiZxm_lZPfy-inMfvE4DQHaKY?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:28:15.235Z\",\n        \"updatedAt\": \"2025-11-28T02:28:15.235Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 25,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1979-03-09\",\n        \"id\": 26,\n        \"first_name\": \"Oscar Isaac\",\n        \"last_name\": \"Hernández\",\n        \"nationality\": \"Guatemalan\",\n        \"image\": \"https://tse3.mm.bing.net/th/id/OIP.dmLZYfqSjdAc2LHx6o2qFgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:30:43.532Z\",\n        \"updatedAt\": \"2025-11-28T02:30:43.532Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 26,\n            \"movieId\": 5\n        }\n    },\n    {\n        \"birthday\": \"1968-02-12\",\n        \"id\": 27,\n        \"first_name\": \"Josh \",\n        \"last_name\": \"Brolin\",\n        \"nationality\": \"American\",\n        \"image\": \"https://tse4.mm.bing.net/th/id/OIP.z6ZSQo8o15rb4Z-asdAMmgHaKd?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"createdAt\": \"2025-11-28T02:32:02.569Z\",\n        \"updatedAt\": \"2025-11-28T02:32:02.569Z\",\n        \"actors_movies\": {\n            \"createdAt\": \"2025-11-29T22:05:13.640Z\",\n            \"updatedAt\": \"2025-11-29T22:05:13.640Z\",\n            \"actorId\": 27,\n            \"movieId\": 5\n        }\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Set Directors To Movies",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[2]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/5/directors",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "5",
+                "directors"
+              ]
+            },
+            "description": "### **Description:**\n\nAdd directors by id directors to movie by id movie.\n\n### **Correct Response:**\n\n``` json\n[\n    {\n        \"id\": 2,\n        \"first_name\": \"Christopher \",\n        \"last_name\": \"Nolan\",\n        \"nationality\": \"British and American\",\n        \"image\": \"https://tse3.mm.bing.net/th/id/OIP.cIz_Ti2Hx4ibDpf83CBR_AHaEs?rs=1&pid=ImgDetMain&o=7&rm=3\",\n        \"birthday\": \"1970-07-30\",\n        \"createdAt\": \"2025-11-28T01:52:28.624Z\",\n        \"updatedAt\": \"2025-11-28T01:52:28.624Z\",\n        \"directors_movies\": {\n            \"createdAt\": \"2025-11-29T22:06:32.831Z\",\n            \"updatedAt\": \"2025-11-29T22:06:32.831Z\",\n            \"directorId\": 2,\n            \"movieId\": 5\n        }\n    }\n]\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Movie",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Poor Things\",\r\n    \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\r\n    \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\r\n    \"release_year\": 2023\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/1",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "1"
+              ]
+            },
+            "description": "### **Description:**\n\nUpdate one movie from database.\n\n### **Correct Response:**\n\n``` json\n{\n    \"id\": 1,\n    \"name\": \"Poor Things\",\n    \"image\": \"https://resizing.flixster.com/t1AsBaA_GhqQDdLdMOswbCP0zF8=/206x305/v2/https://resizing.flixster.com/U_RT77J5o2EfMC-DdAc7Dm8CkKY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNmM2FiYmJhLTFjYTgtNDljOC04MjQ4LTU1Yjg0M2NkNTdmZC5qcGc=\",\n    \"synopsis\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, Bella runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n    \"release_year\": 2023,\n    \"createdAt\": \"2025-11-28T01:47:27.050Z\",\n    \"updatedAt\": \"2025-11-29T22:09:09.765Z\"\n}\n\n ```"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Movie",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/movies/5",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "movies",
+                "5"
+              ]
+            },
+            "description": "### **Description:**\n\nDelete one movie from database.\n\n### **Correct Response:**\n\n<img src=\"https://content.pstmn.io/63605c75-6528-4cad-9bca-2bac8bf85881/aW1hZ2UucG5n\" alt=\"\" height=\"149\" width=\"930\">"
+          },
+          "response": []
+        }
+      ],
+      "description": "## 📘 Movies API Documentation\n\n### 🧾 Overview\n\nThis collection manages **movie resources** in the Movies App API.  \nIt allows you to create, read, update, and delete movies, as well as retrieve detailed information including actors, directors, and genres associated with each movie.\n\n### 🌐 Base URL\n\nCódigo\n\n```\nhttps://moviesapp-lc0z.onrender.com\n\n ```\n\n### 📌 Endpoints\n\n| Method | Endpoint | Description |\n| --- | --- | --- |\n| GET | `/api/movies` | Get all movies |\n| GET | `/api/movies/:id` | Get a single movie by ID |\n| POST | `/api/movies` | Create a new movie |\n| POST | `/api/movies/:id/genres` | Set genres to a movie |\n| POST | `/api/movies/:id/actors` | Set actors to a movie |\n| POST | `/api/movies/:id/directors` | Set directors to a movie |\n| PUT | `/api/movies/:id` | Update an existing movie |\n| DELETE | `/api/movies/:id` | Delete a movie |\n\n### 🧩 Request Body (POST / PUT)\n\n```\n{\n    \"name\": \"Oppenheimer\",\n    \"image\": \"https://resizing.flixster.com/5bbfOrn5Stku1HxlkK4ISYi2uQk=/206x305/v2/https://resizing.flixster.com/dV1vfa4w_dB4wzk7A_VzThWUWw8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEyZDMyYjZmLThmNzAtNDliNC1hMjFmLTA2ZWY4M2UyMjJhMi5qcGc=\",\n    \"synopsis\": \"During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.\",\n    \"release_year\": 2023\n}\n\n ```\n\n- `name` (string) – required\n    \n- `image` (text) – required\n    \n- `synopsis` (text) – optional but recommended\n    \n- `release_year` (dateonly) – required\n    \n\n### 🛡️ Authentication\n\nNo authentication required.  \nCORS is currently open to all origins for educational and portfolio purposes. This configuration allows public access from any frontend during development and testing.\n\n### 🧠 Notes\n\n- All responses are in JSON format.\n    \n- Movie IDs are auto-generated.\n    \n- Each movie must be linked to a valid director and genre.\n    \n- Actors can be associated via their IDs in the `actors` array.\n    \n- The `POST` endpoints with `/genres`, `/actors`, y `/directors` allows existing entities to be associated with a movie."
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    }
+  ]
+}
