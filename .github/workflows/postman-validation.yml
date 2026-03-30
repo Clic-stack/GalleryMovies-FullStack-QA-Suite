@@ -25,4 +25,4 @@ jobs:
         run: |
           newman run movies-app-backend/movies-app.json \
           --reporters cli \
-          --env-var "url=https://moviesapp-lc0z.onrender.com"
+          --env-var "BASE_URL=https://moviesapp-lc0z.onrender.com"
