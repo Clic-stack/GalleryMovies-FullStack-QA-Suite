@@ -1,16 +1,16 @@
-## 🎬 GalleryMovies: Full-Stack QA & Management Suite <br/>  <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Tests-CI--Continuous%20Integration-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
-
-> [!TIP]
+## <p align="center">🎬 GalleryMovies: Full-Stack QA & Management Suite </p> <br/>  <p align="center">[![SecOps: CodeQL Analysis](https://img.shields.io/badge/Analysis-CodeQL--SecOps-F5F5F5?style=for-the-badge&logo=github&logoColor=black&labelColor=A9A9A9)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![SecOps: DAST Dynamic Scan](https://img.shields.io/badge/Scan-DAST%20Dynamic--SecOps-003366?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=000033)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![API Contract: Postman Validation](https://img.shields.io/badge/Validation-API%20Contract--Postman-50C878?style=for-the-badge&logo=postman&logoColor=E5E5E5&labelColor=006400)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Tests-CI--Continuous%20Integration-FFFFFF?style=for-the-badge&logo=jest&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)</p>
+> [!TIP] <p align="justify">
 >  Quick Setup Note: This project includes enviroment variables and configures instructions into .env.example file for development and testing environments, (remember all enviroment values is with your credentials). This facilitates rapid deployment and ensures the test suite runs out-of-the-box without extra security overhead.
-[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)
+[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)[![SecOps: CodeQL Analysis](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml)[![SecOps: DAST Dynamic Scan](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml)[![API Contract: Postman Validation](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml)
 
-A professional fullstack application built with `React`, `Redux`, `Express`, `Sequelize`, and `PostgreSQL`.
+This project is the result of a strategic unification. What began as **Movies Testing**—a focused environment for mastering backend integration tests—has evolved into **GalleryMovies**, a comprehensive Full-Stack QA Suite. 
 
-This project features a robust **CI/CD pipeline** and a **comprehensive testing suite**, demonstrating *scalable API design, cinematic UI, and production-ready architecture*.
+By merging the rigorous testing logic with a cinematic frontend, I’ve created a production-ready ecosystem where code quality, security, and user experience coexist. This transition represents the shift from "just making it work" to **"making it secure, scalable, and verifiable."**
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
 
 ---
+</p>
 
 ## 🌐 Deployment
 
@@ -31,8 +31,13 @@ This project features a robust **CI/CD pipeline** and a **comprehensive testing 
 
 ## 🟢 Technical Quality Assurance
 
-**What does the "passing" badge at the beginning of this project mean?**
-This project implements Continuous Integration (CI/CD). This means that every time a code change is made, an automated system executes 19+ security and functional tests.
+<p align="justify">**What does the "passing" badge at the beginning of this project mean?**
+GalleryMovies is backed by four specialized automated pipelines that guarantee professional standards. This means that every time a code change is made, an automated system executes 19+ security and functional tests:
+
+1.  **Continuous Integration (CI):** 19+ automated tests using **Jest** and **Supertest** validate every push to ensure the core logic remains unbroken.
+2.  **API Contract Validation:** Automated **Postman/Newman** runs verify that the API responses match the expected structure, preventing breaking changes.
+3.  **Static Security (CodeQL):** Deep analysis of the source code to detect potential vulnerabilities before they are even deployed.
+4.  **Dynamic Security (DAST):** Active scanning of the running application to identify real-world security threats.
 
 - **Green Badge (Passing):** The code is stable, secure, and production-ready.
 - **Red Badge (Failing):** Indicates an error was detected before it could affect the end user.
@@ -40,6 +45,7 @@ This project implements Continuous Integration (CI/CD). This means that every ti
 This ensures that GalleryMovies consistently maintains professional quality standards.
 
 ---
+</p>
 
 ### 📊 Database Architecture (Many-to-Many Relationships)
 
@@ -94,7 +100,7 @@ erDiagram
 
 ---
 
-## 🧪 Professional Testing Suite (CI/CD)
+## 🧪 Professional Testing Suite 
 The reliability of **GalleryMovies** is backed by an automated testing workflow. Using **Jest** and **Supertest**, the project implements 19+ strategic tests covering:
 
 - **Full CRUD Operations:** Actors, Genres, Directors, and Movies.
@@ -103,25 +109,31 @@ The reliability of **GalleryMovies** is backed by an automated testing workflow.
 
 To run the tests locally:
 ```bash
+cd movies-app-backend
 npm test
 ```
 
 ---
 
 ## 💻🚀 Tech Stack
-
-| Frontend      | Backend       | Testing & CI/CD | Database            | Security & Middleware |
+</br>
+<div align=center> 
+    
+| Frontend      | Backend       | QA & DevOps     | Database            | Security & Middleware |
 |---------------|---------------|-----------------|---------------------|-----------------------|
 | React 18      | Node.js       | Jest            | PostgreSQL          | Helmet                |
 | Redux Toolkit | Express       | Supertest       | Render (Deployment) | CORS                  |
 | React Router  | Sequelize ORM | GitHub Actions  | Netlify (Frontend)  |
-| Vite          | Morgan        |                 | NeonDB              |
-| Bootstrap     |                                 | Postman             |
+| Vite          | Morgan        | Postman         | NeonDB              |
+| Bootstrap     |               | Newman          |              
 | Bootswatch    | 
 
----
+</br>
+</div>
 
 ## 📁 API Endpoints
+</br>
+<div align=center> 
 
 | Method | Endpoint         | Function |
 |--------|------------------|----------|
@@ -133,9 +145,12 @@ npm test
 
 *Note: Standard CRUD enpoints for all models equally applicable for genres, actors and directors.*
 
----
+</br>
+</div>
 
 ## 🗂️ API Models
+</br>
+<div align=center> 
 
 | Model       | Fields   |            
 |-------------|----------|
@@ -144,7 +159,8 @@ npm test
 | Directors   | id, first_name, last_name, nationality, image, birthday | 
 | Movies      | id, name, image, synopsis, release_year | 
 
----
+</br>
+</div>
 
 ## 🧪 Test Coverage
 
@@ -209,7 +225,10 @@ The following endpoints are tested:
 📁 MOVIES-APP
 |   ├── 📁 .github
 │   |   └── 📁 workflows/
+│   |   |   └── codeql.yml
+│   |   |   └── dast.yml
 │   |   |   └── main.yml
+│   |   |   └── postman-validation.yml
 |   ├── 📁 movies-app-backend
 │   |   └── 📁 node_modules/
 │   |   └── 📁 src/
@@ -249,6 +268,7 @@ The following endpoints are tested:
 |   |   └── .env
 |   |   └── .env.example
 |   |   └── jest.config.js
+|   |   └── movies-app.json
 |   |   └── package-lock.json
 |   |   └── package.json
 |   ├── 📁 movies-app-frontend
@@ -392,26 +412,37 @@ VITE_API_URL=http://localhost:4000/api/v1
 ```bash
 npm run dev
 ```
+---
+
+## 🚀 Future Roadmap
+
+* E2E Testing: Implementation of Playwright for browser-level automation.
 
 ---
 
 ## 🎨Author
-Developed by Clio Salgado. Focused on building reliable, data-driven fullstack solutions with professional testing standards.
+Developed by Clio Salgado. A data-driven fullstack developer focused on reliability, security, and automated excellence.
+</br>
+</br>
 
 🔽 **Versión en Español** 🔽
+</br>
+</br>
 
-## 🎬 GalleryMovies: Suite de Gestión y Calidad (QA) Full-Stack <br/> <br/> <p align="right">[![Continuous Integration (CI/CD) Tests](https://img.shields.io/badge/Pipeline-Integración%20Continua%20(CI)-FFFFFF?style=for-the-badge&logo=postgresql&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/Booking-App/actions)</p>
+## <p align="center">🎬 GalleryMovies: Suite de Gestión y Calidad (QA) Full-Stack</p> <br/> <p align="center">[![SecOps: Análisis CodeQL](https://img.shields.io/badge/Análisis-CodeQL--SecOps-F5F5F5?style=for-the-badge&logo=github&logoColor=black&labelColor=A9A9A9)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![SecOps: Escaneo Dinámico DAST](https://img.shields.io/badge/Escaneo-DAST%20Dinámico--SecOps-003366?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=000033)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![Contrato API: Validación Postman](https://img.shields.io/badge/Validación-Contrato%20API--Postman-50C878?style=for-the-badge&logo=postman&logoColor=E5E5E5&labelColor=006400)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)[![Pruebas de Integración Continua (CI/CD)](https://img.shields.io/badge/Pruebas-CI--Integración%20Continua-FFFFFF?style=for-the-badge&logo=jest&logoColor=003366&labelColor=FFFDD0)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions)</p>
 
-> [!TIP]
+> [!TIP] <p align="justify">
 >  Nota para Configuración Rápida: Este proyecto incluye variables de entorno e instrucciones de configuración en el archivo `.env.example` para entornos de desarrollo y pruebas, (recuerda que todos los valores deben corresponder a tus propias credenciales). Esto facilita un despliegue rápido y garantiza que la suite de pruebas funcione de inmediato (out-of-the-box) sin configuraciones de seguridad adicionales.
-[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)
+[![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)[![SecOps: CodeQL Analysis](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml)[![SecOps: DAST Dynamic Scan](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml)[![API Contract: Postman Validation](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml)
 
-Aplicación fullstack profesional construída con `React`, `Redux`, `Express`, `Sequelize` y `PostgreSQL`. 
-Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas integral y completa**, mostrando una *interfaz cinemática,  diseño de APIs escalables y arquitectura lista para producción*.
+Este proyecto es el resultado de una unificación estratégica. Lo que comenzó como **Movies Testing** un entorno enfocado en el dominio de pruebas de integración para el backend ha evolucionado hasta convertirse en **GalleryMovies**, una suite integral de QA Full-Stack.
+
+Al fusionar una lógica de pruebas rigurosa con una interfaz cinematográfica, he creado un ecosistema listo para producción donde la calidad del código, la seguridad y la experiencia del usuario coexisten. Esta transición representa el cambio de "simplemente hacer que funcione" a **"hacer que sea seguro, escalable y verificable".**
 
 <img width="1862" height="949" alt="image" src="https://github.com/user-attachments/assets/8712a68d-4a72-4644-a9fd-b6939b6efe05" />
 
 ---
+</p>
 
 ## 🌐 Deployment
 
@@ -431,16 +462,21 @@ Este proyecto implementa un **pipeline CI/CD** robusto y una **suite de pruebas 
 ---
 
 ## 🟢 Garantía de Calidad Técnica
+**¿Qué significa el distintivo "passing" al inicio de este proyecto?**
+<p align="justify">GalleryMovies está respaldado por cuatro flujos de trabajo (pipelines) automatizados y especializados que garantizan estándares profesionales. Esto significa que cada vez que se realiza un cambio en el código, un sistema automatizado ejecuta más de 19 pruebas de seguridad y funcionales:
 
-**¿Qué significa el sello "passing" al inicio de este proyecto?**
-Este proyecto utiliza **Integración Continua (CI/CD)**. Significa que cada vez que realizo un cambio en el código, un sistema automatizado ejecuta más de 19 pruebas de seguridad y funcionamiento.
+1. **Integración Continua (CI):** Más de 19 pruebas automatizadas utilizando **Jest** y **Supertest** validan cada actualización para asegurar que la lógica central permanezca intacta.
+2. **Validación de Contrato API:** Ejecuciones automatizadas con **Postman/Newman** verifican que las respuestas de la API coincidan con la estructura esperada, evitando cambios que rompan la compatibilidad.
+3. **Seguridad Estática (CodeQL):** Análisis profundo del código fuente para detectar vulnerabilidades potenciales incluso antes de que sean desplegadas.
+4. **Seguridad Dinámica (DAST):** Escaneo activo de la aplicación en ejecución para identificar amenazas de seguridad en el mundo real.
 
-- **Sello Verde (Passing):** El código es estable, seguro y está listo para producción.
-- **Sello Rojo (Failing):** Indica un error detectado antes de que afecte al usuario final.
+* **Badge Verde (Passing):** El código es estable, seguro y está listo para producción.
+* **Badge Rojo (Failing):** Indica que se detectó un error antes de que pudiera afectar al usuario final.
 
-Esto asegura que **GalleryMovies** mantenga estándares de calidad profesional de forma constante.
+Esto garantiza que GalleryMovies mantenga consistentemente estándares de calidad profesional.
 
 ---
+</p>
 
 ### 📊 Arquitectura de Base de Datos (Base de Datos Relacional Muchos a Muchos)
 
@@ -495,7 +531,7 @@ erDiagram
 
 ---
 
-##🧪 Suite de Pruebas Profesional (CI/CD)
+## 🧪 Suite de Pruebas Profesional
 La confiabilidad de **GalleryMovies** está respaldada por un flujo de trabajo de pruebas automatizadas. Utilizando **Jest** y **Supertest**, el proyecto implementa más de 19 pruebas estratégicas que cubren:
 
 - **Operaciones CRUD Completas:** Actores, Géneros, Directores y Películas.
@@ -504,26 +540,31 @@ La confiabilidad de **GalleryMovies** está respaldada por un flujo de trabajo d
 
 Para correr los test localmente copia y pega el siguiente comando:
 ```bash
+cd movies-app-backend
 npm test
 ```
-
 ---
 
 ## 💻🚀 Tech Stack
+</br>
+<div align=center> 
 
-| Frontend      | Backend       | Testing e Integración Continua (CI/CD) | Base de Datos       | Seguridad y Middlewares |
-|---------------|---------------|----------------------------------------|---------------------|-------------------------|
-| React 18      | Node.js       | Jest                                   | PostgreSQL          | Helmet                  |
-| Redux Toolkit | Express       | Supertest                              | Render (Deployment) | CORS                    |
-| React Router  | Sequelize ORM | GitHub Actions                         | Netlify (Frontend)  |
-| Vite          | Morgan        |                                        | NeonDB              |
-| Bootstrap     |               |                                        | Postman             |
-| Bootswatch    |               |
+| Frontend      | Backend       | QA & DevOps     | Database            | Security & Middleware |
+|---------------|---------------|-----------------|---------------------|-----------------------|
+| React 18      | Node.js       | Jest            | PostgreSQL          | Helmet                |
+| Redux Toolkit | Express       | Supertest       | Render (Deployment) | CORS                  |
+| React Router  | Sequelize ORM | GitHub Actions  | Netlify (Frontend)  |
+| Vite          | Morgan        | Postman         | NeonDB              |
+| Bootstrap     |               | Newman          |              
+| Bootswatch    | 
 
----
-
+</br>
+</div> 
+    
 ## 📁 Endpoints de la API
-
+</br>
+<div align=center> 
+    
 | Método | Endpoint         | Función |
 |--------|------------------|---------|
 | GET    | `/movies`        | Devuelve todas las películas con todos los géneros, actores y directores |
@@ -534,10 +575,13 @@ npm test
 
 *Nota: Los endpoints CRUD estándar para todos los modelos son igualmente aplicables a géneros (genres), actores (actors) y directores (directors).*
 
----
+</br>
+</div> 
 
 ## 🗂️ Modelos de la API
-
+</br>
+<div align=center> 
+    
 | Modelo      | Campos   |            
 |-------------|----------|
 | Genres      | id, name | 
@@ -545,7 +589,8 @@ npm test
 | Directors   | id, first_name, last_name, nationality, image, birthday | 
 | Movies      | id, name, image, synopsis, release_year | 
 
----
+</br>
+</div> 
 
 ## 🧪 Cobertura de tests
 
@@ -610,7 +655,10 @@ Se testearon los siguientes endpoints:
 📁 MOVIES-APP
 |   ├── 📁 .github
 │   |   └── 📁 workflows/
+│   |   |   └── codeql.yml
+│   |   |   └── dast.yml
 │   |   |   └── main.yml
+│   |   |   └── postman-validation.yml
 |   ├── 📁 movies-app-backend
 │   |   └── 📁 node_modules/
 │   |   └── 📁 src/
@@ -650,6 +698,7 @@ Se testearon los siguientes endpoints:
 |   |   └── .env
 |   |   └── .env.example
 |   |   └── jest.config.js
+|   |   └── movies-app.json
 |   |   └── package-lock.json
 |   |   └── package.json
 |   ├── 📁 movies-app-frontend
@@ -711,7 +760,6 @@ Se testearon los siguientes endpoints:
 |   └── .gitignore
 |   └── README.md
 ```
-
 ---
 
 ## ⚙️ Configuración e Instalación
@@ -792,8 +840,12 @@ VITE_API_URL=http://localhost:4000/api/v1
 ```bash
 npm run dev
 ```
-
 ---
 
-## 🎨Author
-Desarrollado por Clio Salgado. Enfocado en la construcción de soluciones full-stack confiables y basadas en datos, con estándares profesionales de testing.
+## 🚀 Hoja de Ruta
+
+* **Pruebas E2E:** Implementación de **Playwright** para la automatización a nivel de navegador.
+
+
+## 🎨Autora
+Desarrollado por Clio Salgado. Desarrolladora Fullstack orientada a datos, enfocada en la confiabilidad, la seguridad y la excelencia a través de la automatización.
