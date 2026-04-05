@@ -3,7 +3,7 @@
 >  Quick Setup Note: This project includes enviroment variables and configures instructions into .env.example file for development and testing environments, (remember all enviroment values is with your credentials). This facilitates rapid deployment and ensures the test suite runs out-of-the-box without extra security overhead.
 [![Node.js CI - Movies App](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/MoviesApp-FullStack-Project/actions/workflows/main.yml)[![SecOps: CodeQL Analysis](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/codeql.yml)[![SecOps: DAST Dynamic Scan](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/dast.yml)[![API Contract: Postman Validation](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml/badge.svg?branch=main&event=push)](https://github.com/Clic-stack/GalleryMovies-FullStack-QA-Suite/actions/workflows/postman-validation.yml)
 
-This project is the result of a strategic unification. What began as **Movies Testing**—a focused environment for mastering backend integration tests—has evolved into **GalleryMovies**, a comprehensive Full-Stack QA Suite. 
+This project is the result of a strategic unification. What began as **Movies Testing** a focused environment for mastering backend integration tests has evolved into **GalleryMovies**, a comprehensive Full-Stack QA Suite. 
 
 By merging the rigorous testing logic with a cinematic frontend, I’ve created a production-ready ecosystem where code quality, security, and user experience coexist. This transition represents the shift from "just making it work" to **"making it secure, scalable, and verifiable."**
 
@@ -31,7 +31,7 @@ By merging the rigorous testing logic with a cinematic frontend, I’ve created 
 
 ## 🟢 Technical Quality Assurance
 
-<p align="justify">**What does the "passing" badge at the beginning of this project mean?**
+**What does the "passing" badge at the beginning of this project mean?** <p align="justify">
 GalleryMovies is backed by four specialized automated pipelines that guarantee professional standards. This means that every time a code change is made, an automated system executes 19+ security and functional tests:
 
 1.  **Continuous Integration (CI):** 19+ automated tests using **Jest** and **Supertest** validate every push to ensure the core logic remains unbroken.
