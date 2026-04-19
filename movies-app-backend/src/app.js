@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // Routes
-app.use('/', routes)
+app.use('/api', routes)
 
 // Error handler
 app.use(errorHandler)
